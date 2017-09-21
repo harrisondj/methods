@@ -55,4 +55,27 @@ describe 'Methods' do
 
   end
 
+  describe 'blackjack' do
+
+    it 'a is closer to 21' do
+      blackjack(17, 22).must_equal(17)
+    end
+
+    it 'b is closer to 21' do
+      blackjack(23, 19).must_equal(19)
+    end
+
+    it 'both are over' do
+      blackjack(25, 23).must_equal(0)
+    end
+
+    it 'both are 21' do
+      blackjack(21, 21).must_equal(0)
+    end
+
+    it 'both are equal and less than 21' do
+      blackjack(8, 8).must_equal(0)
+    end
+
+  end
 end

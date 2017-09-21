@@ -20,6 +20,15 @@
 #
 # TODO - write sleep_in?
 
+def sleep_in?(weekday, vacation)
+	if vacation
+		true
+	elsif !weekday
+		true
+	else
+		false
+	end
+end
 
 # monkey_trouble?
 #
@@ -35,6 +44,15 @@
 #
 # TODO - write monkey_trouble?
 
+def monkey_trouble?(a_smiling, b_smiling)
+	if a_smiling && b_smiling
+		true
+	elsif !a_smiling && !b_smiling
+		true
+	else
+		false
+	end
+end
 
 # sum_double
 #
@@ -48,7 +66,13 @@
 #
 # TODO - write sum_double
 
-
+def sum_double(a, b)
+	if a != b
+		return a + b
+	else
+		return a * 2 + b * 2
+	end
+end
 
 
 # *****************************************************
@@ -73,6 +97,17 @@
 #
 # TODO - write blackjack (tests first)
 
+def blackjack(a, b)
+	if a < 21 
+		return a
+	elsif 
+		return b
+	elsif a > 21 && b > 21
+		return 0
+	elsif a == b
+		return 0
+	end
+end
 
 # n_twice
 #
