@@ -73,9 +73,33 @@ describe 'Methods' do
       blackjack(21, 21).must_equal(0)
     end
 
-    it 'both are equal and less than 21' do
-      blackjack(8, 8).must_equal(0)
+  end
+
+  describe 'n_twice' do
+
+    it 'hello there' do
+      n_twice('hello there', 4).must_equal('oh')
     end
 
   end
+
+  describe 'close_far' do
+    
+    it 'b close to a' do
+      close_far(10, 11, 15).must_equal(true)
+    end
+
+    it 'c close to a' do
+      close_far(25, 23, 24).must_equal(true)
+    end
+
+    it 'all are close' do
+      close_far(50, 51, 49).must_equal(false)
+    end
+    
+    it 'nothing close' do
+      close_far(45, 8, 60).must_equal(false)
+    end
+  end
+
 end

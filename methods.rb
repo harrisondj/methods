@@ -98,9 +98,13 @@ end
 # TODO - write blackjack (tests first)
 
 def blackjack(a, b)
-	if a < 21 
+	if a < 21 && b < a
 		return a
-	elsif 
+	elsif a < 21 && b < 21 && b > a
+		return b
+	elsif b > 21 && a < 21
+		return a
+	elsif a > 21 && b < 21
 		return b
 	elsif a > 21 && b > 21
 		return 0
@@ -124,6 +128,11 @@ end
 #
 # TODO - write n_twice (tests first)
 
+def n_twice(str, n)
+	a = str.slice!(n)
+	b = str.slice!(n * -1)
+	return "#{a}#{b}"
+end
 
 # close_far
 #
@@ -138,3 +147,18 @@ end
 #   * c - an integer
 #
 # TODO - write close_far (tests first)
+
+def close_far(a, b, c)
+	if (a - b).abs <= 1 && (a - c).abs <= 1
+		return false
+	end
+
+	if (a - b).abs <= 1 && (a - c).abs >= 2
+		return true
+	elsif (a - c).abs <= 1 && (a - b).abs >= 2
+		return true
+	else
+		return false
+	end
+
+end
